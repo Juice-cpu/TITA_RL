@@ -1,0 +1,62 @@
+{
+  "cumulative_terminated": 6,
+  "episode_length_s": 24.0,
+  "hard_reasons": [
+    0,
+    0,
+    0,
+    0,
+    6,
+    0,
+    0,
+    0
+  ],
+  "observations_finite": true,
+  "posture": "HIGH",
+  "posture_height_abs_error_mean_m": 0.014181811069561677,
+  "posture_height_mean_m": 0.28824803810228,
+  "residual_checkpoint": "./rl_runs/phase_b_residual/phase_b5_floor_np3o_iter020_selected/checkpoints/residual_phase_b_selected.pt",
+  "safety_hold_steps": 6,
+  "seed": 167,
+  "stair_local_x_max_minmax_m": [
+    1.5917673110961914,
+    4.180629730224609
+  ],
+  "stair_root_z_max_minmax_m": [
+    0.3936947286128998,
+    0.40629470348358154
+  ],
+  "stair_success_total": 0,
+  "stair_verified_level_max": [
+    1.0,
+    2.0,
+    2.0,
+    1.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0
+  ],
+  "steps": 1200,
+  "tunnel_success_total": 0,
+  "velocity_joint_counts": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "velocity_state_projection_counts": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ]
+}

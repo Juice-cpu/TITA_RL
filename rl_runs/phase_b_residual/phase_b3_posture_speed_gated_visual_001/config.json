@@ -1,0 +1,137 @@
+{
+  "name": "tita_uc_phase_b3_posture_curriculum",
+  "stage": "B3",
+  "description": "Frozen official controller plus residual LOW/MID/HIGH command curriculum on a physical support plane",
+  "asset": "./tita_rl_official/resources/tita/urdf/tita_description.urdf",
+  "device": "cuda:0",
+  "num_envs": 16,
+  "episode_length_s": 20.0,
+  "decimation": 4,
+  "dof": 8,
+  "terrain": "flat",
+  "domain_randomization": true,
+  "warm_start": "./rl_runs/phase_b_residual/phase_b5_floor_np3o_iter020_selected/checkpoints/residual_phase_b_selected.pt",
+  "learning_rate": 5e-05,
+  "constraint_optimizer": {
+    "cost_budgets": [
+      0.6,
+      0.221,
+      0.266,
+      0.212
+    ],
+    "initial_cost_multipliers": [
+      0.4,
+      0.35,
+      0.25,
+      0.05
+    ],
+    "minimum_cost_multipliers": [
+      0.4,
+      0.35,
+      0.25,
+      0.05
+    ],
+    "dual_learning_rate": 0.005,
+    "cost_multiplier_max": 2.0,
+    "warmup_steps": 50,
+    "checkpoint_interval": 5
+  },
+  "posture_curriculum": {
+    "enabled": true,
+    "height_commands_m": [
+      0.1,
+      0.2,
+      0.3
+    ],
+    "height_source": "official TITA active-command interface; wheel-axis to body-center command",
+    "initial_mode": "MID",
+    "resample_time_s": 3.0,
+    "transition_time_s": 1.5,
+    "switch_hold_time_s": 0.2,
+    "switch_speed_max_mps": 0.2,
+    "switch_roll_max_rad": 0.12,
+    "switch_pitch_max_rad": 0.12,
+    "speed_limits_mps": [
+      0.15,
+      0.3,
+      0.2
+    ],
+    "mid_only_fraction": 0.1,
+    "low_mid_fraction": 0.45,
+    "policy_selects_mode": false
+  },
+  "simulation_pose_anchors": {
+    "source": "Isaac Lab symmetric pose sweep with official DDTRobot/tita_rl URDF, frozen balancing policy, and 0.20 m/s stability gate",
+    "source_artifact": "rl_runs/phase_b_residual/phase_b3_posture_gate_diag_002/posture_pose_sweep_speed_gated.json",
+    "hardware_validated": false,
+    "transition_time_s": 1.5,
+    "LOW": [
+      0.0,
+      0.76,
+      -2.15,
+      0.0,
+      0.0,
+      0.76,
+      -2.15,
+      0.0
+    ],
+    "MID": [
+      0.0,
+      0.9,
+      -1.8,
+      0.0,
+      0.0,
+      0.9,
+      -1.8,
+      0.0
+    ],
+    "HIGH": [
+      0.0,
+      0.9,
+      -1.1,
+      0.0,
+      0.0,
+      0.9,
+      -1.1,
+      0.0
+    ]
+  },
+  "official_reference": {
+    "default_joint_angles_rad": [
+      0.0,
+      0.8,
+      -1.5,
+      0.0,
+      0.0,
+      0.8,
+      -1.5,
+      0.0
+    ],
+    "base_height_target_m": 0.35,
+    "action_scale": 0.5,
+    "hip_scale_reduction": 0.5,
+    "control_decimation": 4,
+    "stair_tread_m": 0.61,
+    "stair_step_height_curriculum_m": [
+      0.025,
+      0.115
+    ]
+  },
+  "residual_filter_alpha": 0.1,
+  "acceleration_limit": 500.0,
+  "normalized_cost_clip": 10.0,
+  "objective": {
+    "route_weight": 0.4,
+    "energy_weight": 0.35,
+    "mode_weight": 0.25,
+    "smooth_weight": 0.05,
+    "normalization": "phase_b_frozen_offline_p95_smooth_v2",
+    "p95": {
+      "route": 0.0007925402,
+      "energy": 1.983205,
+      "mode": 0.6782783,
+      "smooth": 0.2076107264
+    }
+  },
+  "hardware_validated": false
+}

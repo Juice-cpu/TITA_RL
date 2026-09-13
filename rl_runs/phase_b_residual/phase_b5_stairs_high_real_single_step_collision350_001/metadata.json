@@ -1,0 +1,8 @@
+{
+  "created_utc": "2026-09-13T10:31:22.314142+00:00",
+  "hostname": "ky-MS-7D99",
+  "python": "3.10.12",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "source_revision": null,
+  "config_source": "/home/ky/tita_uc_residual_rl/configs/phase_b5_stairs_high_real_single_step_collision350.json"
+}

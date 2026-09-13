@@ -1,0 +1,11 @@
+{
+  "name": "tita_uc_phase_c_joint_finetune",
+  "stage": "C",
+  "description": "Small-learning-rate unfreeze of the final official-policy layers",
+  "base_config": "phase_b_residual.json",
+  "freeze_base_policy": false,
+  "unfrozen_base_layers": "last_policy_layers_only",
+  "base_learning_rate_multiplier": 0.1,
+  "residual_learning_rate_multiplier": 1.0,
+  "requires": ["phase_b_residual_checkpoint", "official_observation_mapping_review"]
+}

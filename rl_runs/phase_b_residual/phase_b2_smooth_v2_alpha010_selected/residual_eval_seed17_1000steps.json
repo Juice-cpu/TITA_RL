@@ -1,0 +1,91 @@
+{
+  "acceleration_limit": 500.0,
+  "controller": "official+residual",
+  "cost_mean": {
+    "energy": 0.05465458333492279,
+    "mode": 0.0919405072927475,
+    "route": 26.93185806274414,
+    "smooth": 0.052185337990522385
+  },
+  "cot_mech_asset_mass": 0.06313673897579193,
+  "distance_mean_m": 6.029270661994815,
+  "domain_randomization": true,
+  "energy_mean_j": 108.39123084116727,
+  "hard_failures": 0,
+  "hard_reason_counts": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "hard_reason_names": [
+    "infeasible_projection",
+    "velocity",
+    "acceleration",
+    "torque",
+    "collision",
+    "height",
+    "attitude",
+    "clearance"
+  ],
+  "objective_p95": [
+    0.0007925402,
+    1.983205,
+    0.6782783,
+    0.2076107264
+  ],
+  "projection_fraction": 0.0053359375,
+  "qd_absmax": [
+    1.9627134799957275,
+    7.696777820587158,
+    3.0414910316467285,
+    17.06053352355957,
+    1.5622307062149048,
+    3.094951629638672,
+    3.7092809677124023,
+    19.060142517089844
+  ],
+  "qd_preprojection_absmax": [
+    1.9627134799957275,
+    7.696777820587158,
+    3.0414910316467285,
+    17.06053352355957,
+    1.5622307062149048,
+    3.094951629638672,
+    3.7092809677124023,
+    19.060142517089844
+  ],
+  "raw_cost_p95": {
+    "energy": 0.22725050151348114,
+    "mode": 0.04848867654800415,
+    "route": 0.18663333356380463,
+    "smooth": 0.015660494565963745
+  },
+  "residual_checkpoint": "rl_runs/phase_b_residual/phase_b2_smooth_v2_alpha020_selected/checkpoints/residual_phase_b_selected.pt",
+  "residual_filter_alpha": 0.1,
+  "reward_mean": -7.908996449589729,
+  "samples": 128000,
+  "seed": 17,
+  "smooth_component_mean": {
+    "acceleration_ratio": 0.0012785268481820822,
+    "joint_target_change": 0.009474735707044601,
+    "residual_rate": 8.097393583739176e-05,
+    "soft_contact_term": 0.0
+  },
+  "terrain": "rough_warmup",
+  "tracking_error_mean": 0.01868007970135659,
+  "velocity_state_projection_counts": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ]
+}

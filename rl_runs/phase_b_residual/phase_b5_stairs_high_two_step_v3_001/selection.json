@@ -1,0 +1,35 @@
+{
+  "status": "rejected_deterministic_evaluation",
+  "selected_checkpoint": null,
+  "baseline": {
+    "seed": 163,
+    "stair_success_total": 2,
+    "cumulative_terminated": 4,
+    "hard_reasons": [0, 0, 0, 0, 3, 0, 1, 0]
+  },
+  "candidates": [
+    {
+      "checkpoint": "checkpoints/residual_phase_b_iter_00001.pt",
+      "seed": 163,
+      "stair_success_total": 0,
+      "cumulative_terminated": 3,
+      "hard_reasons": [0, 0, 0, 0, 3, 0, 0, 0]
+    },
+    {
+      "checkpoint": "checkpoints/residual_phase_b_iter_00002.pt",
+      "seed": 163,
+      "stair_success_total": 0,
+      "cumulative_terminated": 4,
+      "hard_reasons": [0, 0, 0, 0, 3, 0, 1, 0]
+    }
+  ],
+  "gate": "completion >= 2 and hard terminations <= 4 on seed 163",
+  "distillation": {
+    "status": "rejected",
+    "safe_samples": 3796,
+    "seed163_conservative": "0 completion / 3 collision",
+    "multiseed_anchor_3": "0 completion / 5 hard terminations",
+    "multiseed_anchor_0.25": "0 completion / 6 hard terminations"
+  },
+  "next_action": "short-approach short-tread curriculum baseline"
+}

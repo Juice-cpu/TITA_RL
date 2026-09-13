@@ -1,0 +1,73 @@
+{
+  "source": "Isaac Lab pose sweep using official DDTRobot/tita_rl URDF",
+  "hardware_validated": false,
+  "grid_size": 11,
+  "candidate_count": 121,
+  "stable_candidate_count": 16,
+  "max_stable_speed_mps": 0.2,
+  "minimum_termination_count": 0,
+  "maximum_termination_count": 8,
+  "minimum_speed_absmax_mps": 0.03703874349594116,
+  "poses": [
+    {
+      "name": "LOW",
+      "target_height_m": 0.1,
+      "measured_height_m": 0.12376124411821365,
+      "absolute_error_m": 0.023761242628097534,
+      "joint_angles_rad": [
+        0.0,
+        0.7599999904632568,
+        -2.1500000953674316,
+        0.0,
+        0.0,
+        0.7599999904632568,
+        -2.1500000953674316,
+        0.0
+      ],
+      "roll_absmax_rad": 0.02770608477294445,
+      "pitch_absmax_rad": 0.11866114288568497,
+      "speed_absmax_mps": 0.10935364663600922,
+      "termination_count": 0
+    },
+    {
+      "name": "MID",
+      "target_height_m": 0.2,
+      "measured_height_m": 0.19792358577251434,
+      "absolute_error_m": 0.0020764172077178955,
+      "joint_angles_rad": [
+        0.0,
+        0.9000000357627869,
+        -1.7999999523162842,
+        0.0,
+        0.0,
+        0.9000000357627869,
+        -1.7999999523162842,
+        0.0
+      ],
+      "roll_absmax_rad": 0.040916867554187775,
+      "pitch_absmax_rad": 0.07083383202552795,
+      "speed_absmax_mps": 0.19485701620578766,
+      "termination_count": 0
+    },
+    {
+      "name": "HIGH",
+      "target_height_m": 0.3,
+      "measured_height_m": 0.29290732741355896,
+      "absolute_error_m": 0.007092684507369995,
+      "joint_angles_rad": [
+        0.0,
+        0.9000000357627869,
+        -1.100000023841858,
+        0.0,
+        0.0,
+        0.9000000357627869,
+        -1.100000023841858,
+        0.0
+      ],
+      "roll_absmax_rad": 0.06971979141235352,
+      "pitch_absmax_rad": 0.018803047016263008,
+      "speed_absmax_mps": 0.1677735447883606,
+      "termination_count": 0
+    }
+  ]
+}

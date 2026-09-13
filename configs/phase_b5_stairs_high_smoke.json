@@ -1,0 +1,70 @@
+{
+  "name": "tita_uc_phase_b5_stairs_high_smoke",
+  "stage": "B5-stairs-high-smoke",
+  "description": "First HIGH residual curriculum on randomized shallow three-step stairs",
+  "asset": "./tita_rl_official/resources/tita/urdf/tita_description.urdf",
+  "device": "cuda:0",
+  "num_envs": 16,
+  "episode_length_s": 20.0,
+  "decimation": 4,
+  "dof": 8,
+  "terrain": "stairs",
+  "fixed_posture": "HIGH",
+  "domain_randomization": false,
+  "warm_start": "./rl_runs/phase_b_residual/phase_b5_floor_np3o_iter020_selected/checkpoints/residual_phase_b_selected.pt",
+  "learning_rate": 0.000005,
+  "policy_log_std": -4.5,
+  "freeze_policy_std": true,
+  "constraint_optimizer": {
+    "cost_budgets": [0.60, 0.221, 0.266, 0.212],
+    "initial_cost_multipliers": [0.40, 0.35, 0.25, 0.05],
+    "minimum_cost_multipliers": [0.40, 0.35, 0.25, 0.05],
+    "dual_learning_rate": 0.0025,
+    "cost_multiplier_max": 2.0,
+    "warmup_steps": 100,
+    "checkpoint_interval": 1
+  },
+  "posture_curriculum": {
+    "enabled": false,
+    "height_commands_m": [0.10, 0.20, 0.30],
+    "speed_limits_mps": [0.15, 0.30, 0.20],
+    "policy_selects_mode": false
+  },
+  "stair_curriculum": {
+    "level": "shallow-smoke",
+    "hardware_validated": false,
+    "sampling": "uniform_per_vector_environment",
+    "step_height_range_m": [0.025, 0.045],
+    "tread_range_m": [0.55, 0.67],
+    "width_range_m": [0.90, 1.20],
+    "num_steps": 3,
+    "start_x_m": 0.75,
+    "landing_length_m": 0.80,
+    "preview_distance_m": 1.50,
+    "success_reward": 12.0,
+    "height_progress_reward_scale": 4.0
+  },
+  "simulation_pose_anchors": {
+    "hardware_validated": false,
+    "LOW": [0.0, 0.76, -2.15, 0.0, 0.0, 0.76, -2.15, 0.0],
+    "MID": [0.0, 0.90, -1.80, 0.0, 0.0, 0.90, -1.80, 0.0],
+    "HIGH": [0.0, 0.90, -1.10, 0.0, 0.0, 0.90, -1.10, 0.0]
+  },
+  "residual_filter_alpha": 0.10,
+  "acceleration_limit": 500.0,
+  "normalized_cost_clip": 10.0,
+  "objective": {
+    "route_weight": 0.40,
+    "energy_weight": 0.35,
+    "mode_weight": 0.25,
+    "smooth_weight": 0.05,
+    "normalization": "phase_b_frozen_offline_p95_smooth_v2",
+    "p95": {
+      "route": 0.0007925402,
+      "energy": 1.9832050,
+      "mode": 0.6782783,
+      "smooth": 0.2076107264
+    }
+  },
+  "hardware_validated": false
+}

@@ -1,0 +1,8 @@
+{
+  "created_utc": "2026-09-12T03:35:11.927106+00:00",
+  "hostname": "ky-MS-7D99",
+  "python": "3.10.20",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "source_revision": null,
+  "config_source": "/home/ky/tita_uc_residual_rl/configs/phase_b_residual.json"
+}

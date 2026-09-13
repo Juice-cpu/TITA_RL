@@ -1,0 +1,135 @@
+{
+  "name": "tita_uc_phase_b5_stairs_high_single_step_v1",
+  "stage": "B5-stairs-high-single-step-v1",
+  "description": "HIGH single-step prerequisite before the multi-step stair curriculum",
+  "asset": "./tita_rl_official/resources/tita/urdf/tita_description.urdf",
+  "device": "cuda:0",
+  "num_envs": 64,
+  "episode_length_s": 18.0,
+  "decimation": 4,
+  "dof": 8,
+  "observation_dim": 51,
+  "terrain": "stairs",
+  "fixed_posture": "HIGH",
+  "domain_randomization": false,
+  "warm_start": "./rl_runs/phase_b_residual/phase_b5_floor_np3o_iter020_selected/checkpoints/residual_phase_b_selected.pt",
+  "learning_rate": 5e-07,
+  "policy_log_std": -3.8,
+  "freeze_policy_std": true,
+  "constraint_optimizer": {
+    "cost_budgets": [
+      0.6,
+      0.221,
+      0.266,
+      0.212
+    ],
+    "initial_cost_multipliers": [
+      0.4,
+      0.35,
+      0.25,
+      0.05
+    ],
+    "minimum_cost_multipliers": [
+      0.4,
+      0.35,
+      0.25,
+      0.05
+    ],
+    "dual_learning_rate": 0.001,
+    "cost_multiplier_max": 2.0,
+    "warmup_steps": 100,
+    "checkpoint_interval": 1
+  },
+  "posture_curriculum": {
+    "enabled": false,
+    "height_commands_m": [
+      0.1,
+      0.2,
+      0.3
+    ],
+    "speed_limits_mps": [
+      0.15,
+      0.3,
+      0.2
+    ],
+    "policy_selects_mode": false
+  },
+  "stair_curriculum": {
+    "level": "single-step-ultra-shallow",
+    "next_level": "configs/phase_b5_stairs_high_bootstrap_v4.json",
+    "hardware_validated": false,
+    "sampling": "uniform_per_vector_environment",
+    "step_height_range_m": [
+      0.005,
+      0.015
+    ],
+    "tread_range_m": [
+      0.6,
+      0.75
+    ],
+    "width_range_m": [
+      1.0,
+      1.3
+    ],
+    "num_steps": 1,
+    "start_x_m": 0.75,
+    "landing_length_m": 0.8,
+    "preview_distance_m": 1.5,
+    "success_reward": 12.0,
+    "height_progress_reward_scale": 4.0,
+    "step_progress_reward": 3.0,
+    "level_hold_reward_scale": 1.5,
+    "completion_height_tolerance_m": 0.005,
+    "success_requires_corridor_and_elevation": true
+  },
+  "simulation_pose_anchors": {
+    "hardware_validated": false,
+    "LOW": [
+      0.0,
+      0.76,
+      -2.15,
+      0.0,
+      0.0,
+      0.76,
+      -2.15,
+      0.0
+    ],
+    "MID": [
+      0.0,
+      0.9,
+      -1.8,
+      0.0,
+      0.0,
+      0.9,
+      -1.8,
+      0.0
+    ],
+    "HIGH": [
+      0.0,
+      0.9,
+      -1.1,
+      0.0,
+      0.0,
+      0.9,
+      -1.1,
+      0.0
+    ]
+  },
+  "residual_filter_alpha": 0.1,
+  "acceleration_limit": 500.0,
+  "normalized_cost_clip": 10.0,
+  "objective": {
+    "route_weight": 0.4,
+    "energy_weight": 0.35,
+    "mode_weight": 0.25,
+    "smooth_weight": 0.05,
+    "normalization": "phase_b_frozen_offline_p95_smooth_v2",
+    "p95": {
+      "route": 0.0007925402,
+      "energy": 1.983205,
+      "mode": 0.6782783,
+      "smooth": 0.2076107264
+    }
+  },
+  "hardware_validated": false
+}

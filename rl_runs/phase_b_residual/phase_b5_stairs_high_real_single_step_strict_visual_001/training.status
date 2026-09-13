@@ -1,0 +1,5 @@
+state=completed
+exit_code=0
+finished_at=2026-09-13T17:57:51+08:00
+latest_checkpoint=residual_phase_b_iter_00060.pt
+log=/home/ky/tita_uc_residual_rl/rl_runs/phase_b_residual/phase_b5_stairs_high_real_single_step_strict_visual_001/training.log

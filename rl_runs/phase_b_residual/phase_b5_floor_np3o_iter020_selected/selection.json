@@ -1,0 +1,16 @@
+{
+  "status": "selected_phase_b5_simulation_candidate",
+  "checkpoint": "checkpoints/residual_phase_b_selected.pt",
+  "checkpoint_sha256": "9049f50a1a3d64915464ad463e4598afaeeb7666ef7960d93eabf862dfa00281",
+  "source_checkpoint": "../phase_b5_floor_np3o_warm_050/checkpoints/residual_phase_b_iter_00020.pt",
+  "warm_start_checkpoint": "../phase_b2_smooth_v2_alpha010_selected/checkpoints/residual_phase_b_selected.pt",
+  "residual_filter_alpha": 0.10,
+  "minimum_cost_multipliers": [0.40, 0.35, 0.25, 0.05],
+  "smooth_definition": "smooth_v2",
+  "smooth_p95": 0.2076107264,
+  "evaluation_seeds": [11, 17, 23],
+  "steps_per_seed": 1000,
+  "samples_per_controller": 384000,
+  "selection_rule": "zero hard failures and no per-seed or aggregate regression in route, COT, tracking, mode, or smoothness",
+  "hardware_validated": false
+}

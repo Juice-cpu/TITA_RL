@@ -1,0 +1,82 @@
+{
+  "name": "tita_uc_phase_b2_rough",
+  "stage": "B2",
+  "description": "Warm-started residual policy on a stable plane with collision-free USD preview obstacles",
+  "asset": "./tita_rl_official/resources/tita/urdf/tita_description.urdf",
+  "device": "cuda:0",
+  "num_envs": 128,
+  "episode_length_s": 20.0,
+  "decimation": 4,
+  "dof": 8,
+  "terrain": "rough_warmup",
+  "domain_randomization": true,
+  "warm_start": "./rl_runs/phase_b_residual/phase_b_uc_v1_zero_init_050/checkpoints/residual_phase_b_iter_00050.pt",
+  "learning_rate": 0.0001,
+  "residual_filter_alpha": 0.25,
+  "acceleration_limit": 500.0,
+  "velocity_safety_margin": 1.0,
+  "acceleration_filter_time_constant_s": 0.1,
+  "reset_stabilization_steps": 10,
+  "clearance_hold_margin_m": 0.35,
+  "clearance_release_hysteresis_m": 0.1,
+  "wheel_hold_brake_torque_nm": 3.0,
+  "terrain_defaults": {
+    "stage": 1,
+    "support_surface": "native_physx_plane",
+    "preview_obstacle_height_m": 0.08,
+    "preview_obstacle_forward_m": [
+      0.75,
+      0.95
+    ],
+    "preview_obstacle_lateral_m": [
+      -1.0,
+      1.0
+    ],
+    "preview_obstacles_collision_enabled": false,
+    "ray_preview_length_m": 1.6,
+    "ray_preview_width_m": 2.2,
+    "clearance_default_m": 1.0,
+    "hard_clearance_half_width_m": 0.25,
+    "preview_threshold_m": 0.002,
+    "hazard_step_threshold_m": 0.055,
+    "hazard_drop_threshold_m": 0.075,
+    "later_stages": [
+      "physical_obstacles",
+      "bounded_rough",
+      "slope",
+      "stairs"
+    ]
+  },
+  "randomization_defaults": {
+    "base_mass_add_kg": [
+      -2.0,
+      2.0
+    ],
+    "static_friction": [
+      0.7,
+      1.2
+    ],
+    "dynamic_friction": [
+      0.5,
+      1.0
+    ],
+    "restitution": [
+      0.0,
+      0.05
+    ]
+  },
+  "objective": {
+    "route_weight": 0.4,
+    "energy_weight": 0.35,
+    "mode_weight": 0.25,
+    "smooth_weight": 0.05,
+    "normalization": "phase_b_frozen_offline_p95",
+    "p95": {
+      "route": 0.0007925402,
+      "energy": 1.983205,
+      "mode": 0.6782783,
+      "smooth": 0.06604067
+    }
+  },
+  "hardware_validated": false
+}

@@ -1,0 +1,35 @@
+{
+  "name": "tita_uc_phase_b2_alpha010_selected",
+  "stage": "B2",
+  "description": "Selected frozen-base residual policy with alpha 0.10 execution filtering",
+  "asset": "./tita_rl_official/resources/tita/urdf/tita_description.urdf",
+  "device": "cuda:0",
+  "num_envs": 128,
+  "episode_length_s": 20.0,
+  "decimation": 4,
+  "dof": 8,
+  "terrain": "rough_warmup",
+  "domain_randomization": true,
+  "residual_filter_alpha": 0.10,
+  "acceleration_limit": 500.0,
+  "objective": {
+    "route_weight": 0.40,
+    "energy_weight": 0.35,
+    "mode_weight": 0.25,
+    "smooth_weight": 0.05,
+    "normalization": "phase_b_frozen_offline_p95_smooth_v2",
+    "p95": {
+      "route": 0.0007925402,
+      "energy": 1.983205,
+      "mode": 0.6782783,
+      "smooth": 0.2076107264
+    }
+  },
+  "evaluation": {
+    "seeds": [11, 17, 23],
+    "steps_per_seed": 1000,
+    "samples_per_controller": 384000,
+    "command_x_mps": 0.3
+  },
+  "hardware_validated": false
+}

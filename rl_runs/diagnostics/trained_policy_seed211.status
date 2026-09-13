@@ -1,0 +1,5 @@
+state=completed
+exit_code=0
+finished_at=2026-09-13T18:02:18+08:00
+result=/home/ky/tita_uc_residual_rl/rl_runs/diagnostics/trained_policy_seed211.json
+log=/home/ky/tita_uc_residual_rl/rl_runs/diagnostics/trained_policy_seed211.log

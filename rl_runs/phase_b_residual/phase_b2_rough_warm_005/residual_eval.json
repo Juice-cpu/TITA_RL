@@ -1,0 +1,54 @@
+{
+  "acceleration_limit": 500.0,
+  "controller": "official+residual",
+  "cost_mean": {
+    "energy": 0.21834349632263184,
+    "mode": 0.26680314540863037,
+    "route": 0.5452126860618591,
+    "smooth": 0.10395555943250656
+  },
+  "cot_mech_asset_mass": 0.23965004180768162,
+  "distance_mean_m": 1.2691506147384644,
+  "domain_randomization": true,
+  "energy_mean_j": 86.60398864746094,
+  "hard_failures": 0,
+  "hard_reason_counts": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "hard_reason_names": [
+    "infeasible_projection",
+    "velocity",
+    "acceleration",
+    "torque",
+    "collision",
+    "height",
+    "attitude",
+    "clearance"
+  ],
+  "objective_p95": [
+    0.0007925402,
+    1.983205,
+    0.6782783,
+    0.06604067
+  ],
+  "projection_fraction": 0.0215625,
+  "raw_cost_p95": {
+    "energy": 2.060157537460327,
+    "mode": 0.8574733734130859,
+    "route": 0.00036741880467161536,
+    "smooth": 0.041457027196884155
+  },
+  "residual_checkpoint": "rl_runs/phase_b_residual/phase_b2_rough_warm_005/checkpoints/residual_phase_b_iter_00005.pt",
+  "reward_mean": 2.5667671421170235,
+  "samples": 25600,
+  "seed": 11,
+  "terrain": "rough_warmup",
+  "tracking_error_mean": 0.06442423321306706
+}

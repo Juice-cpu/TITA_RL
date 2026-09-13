@@ -1,0 +1,41 @@
+{
+  "acceleration_limit": 500.0,
+  "controller": "official+residual",
+  "cost_mean": {
+    "energy": 0.2238045483827591,
+    "mode": 0.2515203654766083,
+    "route": 0.5927535891532898,
+    "smooth": 0.30804380774497986
+  },
+  "cot_mech_asset_mass": 0.24964129559986295,
+  "distance_mean_m": 1.248828649520874,
+  "energy_mean_j": 88.77005767822266,
+  "hard_failures": 0,
+  "hard_reason_counts": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "objective_p95": [
+    0.0007925402,
+    1.983205,
+    0.6782783,
+    0.06604067
+  ],
+  "projection_fraction": 0.02,
+  "raw_cost_p95": {
+    "energy": 1.963489055633545,
+    "mode": 0.6548404693603516,
+    "route": 0.0007256790995597839,
+    "smooth": 0.07292775064706802
+  },
+  "residual_checkpoint": "rl_runs/phase_b_residual/phase_b_uc_v1_zero_init_050/checkpoints/residual_phase_b_iter_00050.pt",
+  "reward_mean": 2.5485883785039185,
+  "samples": 25600,
+  "seed": 11,
+  "tracking_error_mean": 0.05415654200187418
+}

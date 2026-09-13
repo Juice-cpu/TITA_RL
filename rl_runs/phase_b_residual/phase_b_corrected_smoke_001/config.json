@@ -1,0 +1,49 @@
+{
+  "name": "tita_uc_phase_b_residual",
+  "stage": "B",
+  "description": "Frozen official base policy with an 8-D joint-target residual policy",
+  "asset": "./tita_rl_official/resources/tita/urdf/tita_description.urdf",
+  "device": "cuda:0",
+  "num_envs": 128,
+  "episode_length_s": 20.0,
+  "decimation": 4,
+  "dof": 8,
+  "freeze_base_policy": true,
+  "residual_limit": 0.2,
+  "posture_scale": 0.75,
+  "safety_calibration": {
+    "source": "Isaac Sim 4.5 frozen official policy, 128 envs x 200 steps",
+    "observed_acceleration_absmax": 402.911,
+    "simulation_acceleration_limit": 500.0,
+    "hardware_validated": false,
+    "velocity_safety_margin": 0.5
+  },
+  "base_control": {
+    "type": "official_mixed_effort",
+    "leg_kp": 40.0,
+    "leg_kd": 1.0,
+    "wheel_target_gain": 10.0,
+    "wheel_damping": 0.5,
+    "action_scale": 0.5
+  },
+  "objective": {
+    "route_weight": 1.0,
+    "energy_weight": 0.15,
+    "mode_weight": 0.2,
+    "smooth_weight": 0.05,
+    "normalization": "frozen_offline_p95"
+  },
+  "hard_constraints": [
+    "collision",
+    "clearance_violation",
+    "braking_distance_violation",
+    "torque_limit",
+    "joint_limit",
+    "velocity_limit",
+    "acceleration_limit",
+    "unsafe_posture_switch",
+    "stale_sensor",
+    "invalid_goal_or_path_version"
+  ],
+  "official_base_checkpoint": "./tita_rl_official/tita_example_10000.pt"
+}

@@ -1,0 +1,90 @@
+{
+  "acceleration_limit": 500.0,
+  "controller": "official+residual",
+  "cost_mean": {
+    "energy": 0.21923576295375824,
+    "mode": 0.26316046714782715,
+    "route": 0.5711570382118225,
+    "smooth": 0.09887071698904037
+  },
+  "cot_mech_asset_mass": 0.24367025330501646,
+  "distance_mean_m": 1.253312110900879,
+  "domain_randomization": true,
+  "energy_mean_j": 86.9578857421875,
+  "hard_failures": 0,
+  "hard_reason_counts": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "hard_reason_names": [
+    "infeasible_projection",
+    "velocity",
+    "acceleration",
+    "torque",
+    "collision",
+    "height",
+    "attitude",
+    "clearance"
+  ],
+  "objective_p95": [
+    0.0007925402,
+    1.983205,
+    0.6782783,
+    0.06604067
+  ],
+  "projection_fraction": 0.021796875,
+  "qd_absmax": [
+    1.7169618606567383,
+    7.654812812805176,
+    3.0016751289367676,
+    17.05828094482422,
+    1.440836787223816,
+    3.0829896926879883,
+    3.5379068851470947,
+    18.980506896972656
+  ],
+  "qd_preprojection_absmax": [
+    1.7169618606567383,
+    7.654812812805176,
+    3.0016751289367676,
+    17.05828094482422,
+    1.440836787223816,
+    3.0829896926879883,
+    3.5379068851470947,
+    18.980506896972656
+  ],
+  "raw_cost_p95": {
+    "energy": 2.033900499343872,
+    "mode": 0.8459299206733704,
+    "route": 0.0003704091068357229,
+    "smooth": 0.038094453513622284
+  },
+  "residual_checkpoint": "rl_runs/phase_b_residual/phase_b2_alpha025_warm_005/checkpoints/residual_phase_b_iter_00005.pt",
+  "residual_filter_alpha": 0.25,
+  "reward_mean": 2.557713000550866,
+  "samples": 25600,
+  "seed": 11,
+  "smooth_component_mean": {
+    "acceleration_ratio": 0.005759430583566427,
+    "residual_rate": 0.0007700574351474643,
+    "soft_contact_term": 0.0
+  },
+  "terrain": "rough_warmup",
+  "tracking_error_mean": 0.0637184172985144,
+  "velocity_state_projection_counts": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ]
+}

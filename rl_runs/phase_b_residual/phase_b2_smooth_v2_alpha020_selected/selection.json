@@ -1,0 +1,22 @@
+{
+  "status": "selected_phase_b2_simulation_candidate",
+  "checkpoint": "checkpoints/residual_phase_b_selected.pt",
+  "checkpoint_sha256": "5f31cc09d5889242a5a6b5032d6cedb62322b826322f32d59c4261d3c168dacf",
+  "source_checkpoint": "../phase_b2_state_projected_warm_005/checkpoints/residual_phase_b_iter_00005.pt",
+  "residual_filter_alpha": 0.2,
+  "smooth_definition": "smooth_v2",
+  "smooth_p95": 0.2076107264,
+  "evaluation_seeds": [11, 17, 23],
+  "samples_per_seed": 25600,
+  "hardware_validated": false,
+  "rejected_checkpoints": [
+    {
+      "path": "../phase_b2_smooth_v2_warm_005/checkpoints/residual_phase_b_iter_00005.pt",
+      "reason": "smooth_v2 and tracking regressed against the official policy"
+    },
+    {
+      "path": "../phase_b2_smooth_v2_alpha020_warm_020/checkpoints/residual_phase_b_iter_00020.pt",
+      "reason": "smooth_v2 regressed against the official policy"
+    }
+  ]
+}

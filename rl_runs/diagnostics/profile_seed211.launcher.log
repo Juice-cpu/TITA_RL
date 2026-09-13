@@ -1,0 +1,139 @@
+[3gH    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H   [INFO] Using python from: /home/ky/tita_uc_residual_rl/IsaacLab/_isaac_sim/python.sh
+[INFO][AppLauncher]: Loading experience file: /home/ky/Documents/Codex/2026-09-11/new-chat/work/IsaacLab/apps/isaaclab.python.headless.kit
+Loading user config located at: '/home/ky/isaacsim/kit/data/Kit/Isaac-Sim/4.5/user.config.json'
+[Info] [carb] Logging to file: /home/ky/isaacsim/kit/logs/Kit/Isaac-Sim/4.5/kit_20260913_165255.log
+2026-09-13 08:52:55 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+2026-09-13 08:52:55 [241ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX
+2026-09-13 08:52:55 [384ms] [Warning] [omni.datastore] OmniHub is inaccessible
+2026-09-13 08:52:55 [500ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.178.04    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4070          | Yes: 0 |     | 12282   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2786      | d053552b.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 22.04.5 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.5, Kernel: 6.8.0-138-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: Intel(R) Core(TM) i7-14700KF
+| Cores: 20 | Logical Cores: 28
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 31868 | Free Memory: 22698
+| Total Page/Swap (MB): 2047 | Free Page/Swap: 2047
+|---------------------------------------------------------------------------------------------|
+[TITA-UC][probe] building candidate grid
+Setting seed: 211
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 211
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+2026-09-13 08:52:58 [3,507ms] [Error] [gpu.foundation.plugin] DriverShaderCacheManager::init() called without a shutdown()!
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.178.04    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4070          | Yes: 0 |     | 12282   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2786      | d053552b.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 22.04.5 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.5, Kernel: 6.8.0-138-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: Intel(R) Core(TM) i7-14700KF
+| Cores: 20 | Logical Cores: 28
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 31868 | Free Memory: 22508
+| Total Page/Swap (MB): 2047 | Free Page/Swap: 2047
+|---------------------------------------------------------------------------------------------|
+2026-09-13 08:52:59 [4,114ms] [Warning] [omni.graph.visualization.nodes._impl.extension] No Viewport Window to add omni.graph.visualization.nodes-2.1.1 scene to
+2026-09-13 08:52:59 [4,212ms] [Warning] [isaacsim.asset.importer.urdf] No mass specified for link ch201
+2026-09-13 08:52:59 [4,213ms] [Warning] [isaacsim.asset.importer.urdf] Link ch201 has no colliders, and no inertia was imported; assigning a small isotropic inertia matrix
+2026-09-13 08:52:59 [4,213ms] [Warning] [isaacsim.asset.importer.urdf] ch201: Joint Axis is not body aligned with X, Y or Z primary axis. Adjusting PhysX joint alignment to Axis X and reorienting bodies.
+2026-09-13 08:52:59 [4,307ms] [Warning] [isaacsim.asset.importer.urdf] No mass specified for link left_camera
+2026-09-13 08:52:59 [4,308ms] [Warning] [isaacsim.asset.importer.urdf] Link left_camera has no colliders, and no inertia was imported; assigning a small isotropic inertia matrix
+2026-09-13 08:52:59 [4,308ms] [Warning] [isaacsim.asset.importer.urdf] left_camera: Joint Axis is not body aligned with X, Y or Z primary axis. Adjusting PhysX joint alignment to Axis X and reorienting bodies.
+2026-09-13 08:52:59 [4,309ms] [Warning] [isaacsim.asset.importer.urdf] No mass specified for link right_camara
+2026-09-13 08:52:59 [4,309ms] [Warning] [isaacsim.asset.importer.urdf] Link right_camara has no colliders, and no inertia was imported; assigning a small isotropic inertia matrix
+2026-09-13 08:52:59 [4,309ms] [Warning] [isaacsim.asset.importer.urdf] right_camera: Joint Axis is not body aligned with X, Y or Z primary axis. Adjusting PhysX joint alignment to Axis X and reorienting bodies.
+2026-09-13 08:52:59 [4,310ms] [Warning] [isaacsim.asset.importer.urdf] No mass specified for link spad
+2026-09-13 08:52:59 [4,310ms] [Warning] [isaacsim.asset.importer.urdf] Link spad has no colliders, and no inertia was imported; assigning a small isotropic inertia matrix
+2026-09-13 08:52:59 [4,310ms] [Warning] [isaacsim.asset.importer.urdf] spad: Joint Axis is not body aligned with X, Y or Z primary axis. Adjusting PhysX joint alignment to Axis X and reorienting bodies.
+2026-09-13 08:52:59 [4,311ms] [Warning] [isaacsim.asset.importer.urdf] No mass specified for link spad1
+2026-09-13 08:52:59 [4,312ms] [Warning] [isaacsim.asset.importer.urdf] Link spad1 has no colliders, and no inertia was imported; assigning a small isotropic inertia matrix
+2026-09-13 08:52:59 [4,313ms] [Warning] [isaacsim.asset.importer.urdf] spad1: Joint Axis is not body aligned with X, Y or Z primary axis. Adjusting PhysX joint alignment to Axis X and reorienting bodies.
+2026-09-13 08:53:00 [5,363ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPreviewSurface.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-09-13 08:53:00 [5,364ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdUVTexture.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-09-13 08:53:00 [5,364ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-09-13 08:53:00 [5,364ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float2.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-09-13 08:53:00 [5,364ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float3.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-09-13 08:53:00 [5,364ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float4.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-09-13 08:53:00 [5,364ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_int.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-09-13 08:53:00 [5,364ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_string.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-09-13 08:53:00 [5,364ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_normal.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-09-13 08:53:00 [5,364ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_point.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-09-13 08:53:00 [5,365ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_vector.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-09-13 08:53:00 [5,365ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_matrix.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-09-13 08:53:00 [5,365ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdTransform2d.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+[INFO]: Time taken for scene creation : 7.484936 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 108
+	Environment spacing   : 6.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.560339 seconds
+[INFO]: Completed setting up the environment...
+[TITA-UC] hard contact bodies: ['base_link']
+[TITA-UC] soft contact bodies: ['left_leg_3', 'right_leg_3']
+[TITA-UC] stair dimensions height/tread/width min=[0.17000000178813934, 0.3199999928474426, 1.0] max=[0.17000000178813934, 0.3199999928474426, 1.0] steps=1
+[TITA-UC][probe] environment constructed; resetting
+[TITA-UC][probe] reset complete; app_running=True
+[TITA-UC][probe] loading frozen official policy
+[TITA-UC][probe] stabilizing
+[TITA-UC][probe] scanning jump candidates
+[TITA-UC][probe] scan step 0/250; active=108
+[TITA-UC][probe] scan step 25/250; active=108
+[TITA-UC][probe] scan step 50/250; active=108
+[TITA-UC][probe] scan step 75/250; active=108
+[TITA-UC][probe] scan step 100/250; active=108
+[TITA-UC][probe] scan step 125/250; active=108
+[TITA-UC][probe] scan step 150/250; active=108
+[TITA-UC][probe] scan step 175/250; active=108
+[TITA-UC][probe] scan step 200/250; active=108
+[TITA-UC][probe] scan step 225/250; active=108
+[TITA-UC][probe] candidate scan complete; writing result
+{
+  "step_height_m": 0.17,
+  "tread_m": 0.32,
+  "platform_end_m": 1.6700000000000002,
+  "required_stable_hold_steps": 25,
+  "candidate_count": 108,
+  "successful_candidates": 0,
+  "collision_free_successful_candidates": 0,
+  "maximum_root_rise_m": 0.17348024249076843,
+  "maximum_vertical_speed_mps": 1.5116944313049316
+}

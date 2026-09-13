@@ -1,0 +1,17 @@
+{
+  "action_mse_after": 0.0005016356590203941,
+  "action_mse_before": 0.0005022988771088421,
+  "anchor_mse_after": 7.299092885659775e-08,
+  "anchor_weight": 3.0,
+  "elite_datasets": [
+    "/home/ky/tita_uc_residual_rl/rl_runs/phase_b_residual/phase_b5_stairs_high_two_step_v3_001/stair_elites_seed163.pt",
+    "/home/ky/tita_uc_residual_rl/rl_runs/phase_b_residual/phase_b5_stairs_high_two_step_v3_001/stair_elites_seed167.pt"
+  ],
+  "epochs": 30,
+  "learning_rate": 0.0001,
+  "max_policy_shift": 0.0016091156285256147,
+  "projected_samples_excluded": 874,
+  "samples": 3796,
+  "seed": 163,
+  "source_checkpoint": "/home/ky/tita_uc_residual_rl/rl_runs/phase_b_residual/phase_b5_stairs_high_two_step_v3_001/checkpoints/residual_phase_b_iter_00001.pt"
+}

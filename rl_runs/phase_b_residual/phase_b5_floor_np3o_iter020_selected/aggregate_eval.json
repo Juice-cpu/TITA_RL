@@ -1,0 +1,39 @@
+{
+  "seeds": [11, 17, 23],
+  "steps_per_seed": 1000,
+  "samples_per_controller": 384000,
+  "official": {
+    "tracking_error_mean": 0.019626659551324945,
+    "distance_mean_m": 5.959039836656302,
+    "energy_mean_j": 109.7148191537708,
+    "cot_mech_asset_mass": 0.06466181761090291,
+    "route": 46.7709592183431,
+    "energy": 0.0553219790259997,
+    "mode": 0.09355869144201279,
+    "smooth": 0.05227826659878095,
+    "hard_failures": 0
+  },
+  "official_plus_residual": {
+    "tracking_error_mean": 0.018635179944103585,
+    "distance_mean_m": 6.072757169643107,
+    "energy_mean_j": 107.73294848203659,
+    "cot_mech_asset_mass": 0.06230413442827037,
+    "route": 4.540863672892253,
+    "energy": 0.05432265251874924,
+    "mode": 0.09281250337759654,
+    "smooth": 0.05189159388343493,
+    "hard_failures": 0
+  },
+  "change_percent": {
+    "tracking_error_mean": -5.051698199729702,
+    "distance_mean_m": 1.9083163748509688,
+    "energy_mean_j": -1.8063837565612015,
+    "cot_mech_asset_mass": -3.6461752387161495,
+    "route": -90.29127529394059,
+    "energy": -1.8063824267400332,
+    "mode": -0.7975614589252017,
+    "smooth": -0.7396433365199597
+  },
+  "accepted": true,
+  "hardware_validated": false
+}

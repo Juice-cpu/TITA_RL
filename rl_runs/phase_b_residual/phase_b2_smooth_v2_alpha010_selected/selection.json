@@ -1,0 +1,19 @@
+{
+  "status": "selected_phase_b2_simulation_candidate",
+  "checkpoint": "checkpoints/residual_phase_b_selected.pt",
+  "checkpoint_sha256": "5f31cc09d5889242a5a6b5032d6cedb62322b826322f32d59c4261d3c168dacf",
+  "source_checkpoint": "../phase_b2_smooth_v2_alpha020_selected/checkpoints/residual_phase_b_selected.pt",
+  "residual_filter_alpha": 0.10,
+  "smooth_definition": "smooth_v2",
+  "smooth_p95": 0.2076107264,
+  "evaluation_seeds": [11, 17, 23],
+  "steps_per_seed": 1000,
+  "samples_per_controller": 384000,
+  "selection_rule": "zero aggregate hard failures and no aggregate regression in route, COT, tracking, mode, or smoothness",
+  "hardware_validated": false,
+  "notes": [
+    "Seed 17 mode cost regressed by 0.018 percent; three-seed aggregate mode cost improved by 0.028 percent.",
+    "The alpha 0.20 execution setting was rejected because aggregate smoothness did not pass the corrected 1000-step check.",
+    "The adaptive 50-iteration checkpoints were rejected because tested candidates either regressed mode cost or produced collisions."
+  ]
+}

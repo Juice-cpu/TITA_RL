@@ -1,0 +1,130 @@
+{
+  "name": "tita_uc_phase_b4_tunnel_low",
+  "stage": "B4",
+  "description": "Frozen official controller plus LOW residual policy through randomized physical tunnel geometry",
+  "asset": "./tita_rl_official/resources/tita/urdf/tita_description.urdf",
+  "device": "cuda:0",
+  "num_envs": 16,
+  "episode_length_s": 20.0,
+  "decimation": 4,
+  "dof": 8,
+  "terrain": "tunnel",
+  "fixed_posture": "LOW",
+  "domain_randomization": false,
+  "warm_start": "./rl_runs/phase_b_residual/phase_b5_floor_np3o_iter020_selected/checkpoints/residual_phase_b_selected.pt",
+  "learning_rate": 2.5e-05,
+  "constraint_optimizer": {
+    "cost_budgets": [
+      0.6,
+      0.221,
+      0.266,
+      0.212
+    ],
+    "initial_cost_multipliers": [
+      0.4,
+      0.35,
+      0.25,
+      0.05
+    ],
+    "minimum_cost_multipliers": [
+      0.4,
+      0.35,
+      0.25,
+      0.05
+    ],
+    "dual_learning_rate": 0.0025,
+    "cost_multiplier_max": 2.0,
+    "warmup_steps": 100,
+    "checkpoint_interval": 5
+  },
+  "posture_curriculum": {
+    "enabled": false,
+    "height_commands_m": [
+      0.1,
+      0.2,
+      0.3
+    ],
+    "speed_limits_mps": [
+      0.15,
+      0.3,
+      0.2
+    ],
+    "policy_selects_mode": false
+  },
+  "tunnel_curriculum": {
+    "source": "simulation design range derived from official 0.47 x 0.30 x 0.19 m base collision box",
+    "hardware_validated": false,
+    "sampling": "uniform_per_vector_environment",
+    "net_height_range_m": [
+      0.34,
+      0.44
+    ],
+    "net_width_range_m": [
+      0.4,
+      0.65
+    ],
+    "length_range_m": [
+      0.6,
+      1.5
+    ],
+    "start_x_m": 0.75,
+    "wall_thickness_m": 0.1,
+    "preview_distance_m": 1.5,
+    "clearance_buffer_m": 0.01,
+    "recommended_physical_start_point_m": {
+      "net_height": 0.39,
+      "net_width": 0.52,
+      "length": 1.0
+    }
+  },
+  "simulation_pose_anchors": {
+    "hardware_validated": false,
+    "LOW": [
+      0.0,
+      0.76,
+      -2.15,
+      0.0,
+      0.0,
+      0.76,
+      -2.15,
+      0.0
+    ],
+    "MID": [
+      0.0,
+      0.9,
+      -1.8,
+      0.0,
+      0.0,
+      0.9,
+      -1.8,
+      0.0
+    ],
+    "HIGH": [
+      0.0,
+      0.9,
+      -1.1,
+      0.0,
+      0.0,
+      0.9,
+      -1.1,
+      0.0
+    ]
+  },
+  "residual_filter_alpha": 0.1,
+  "acceleration_limit": 500.0,
+  "normalized_cost_clip": 10.0,
+  "objective": {
+    "route_weight": 0.4,
+    "energy_weight": 0.35,
+    "mode_weight": 0.25,
+    "smooth_weight": 0.05,
+    "normalization": "phase_b_frozen_offline_p95_smooth_v2",
+    "p95": {
+      "route": 0.0007925402,
+      "energy": 1.983205,
+      "mode": 0.6782783,
+      "smooth": 0.2076107264
+    }
+  },
+  "hardware_validated": false
+}

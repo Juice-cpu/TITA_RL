@@ -1,0 +1,54 @@
+{
+  "acceleration_limit": 500.0,
+  "controller": "official",
+  "cost_mean": {
+    "energy": 0.22085314989089966,
+    "mode": 0.2702074348926544,
+    "route": 0.5968167781829834,
+    "smooth": 0.08694389462471008
+  },
+  "cot_mech_asset_mass": 0.2481443241440026,
+  "distance_mean_m": 1.2397942543029785,
+  "domain_randomization": true,
+  "energy_mean_j": 87.59941101074219,
+  "hard_failures": 0,
+  "hard_reason_counts": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "hard_reason_names": [
+    "infeasible_projection",
+    "velocity",
+    "acceleration",
+    "torque",
+    "collision",
+    "height",
+    "attitude",
+    "clearance"
+  ],
+  "objective_p95": [
+    0.0007925402,
+    1.983205,
+    0.6782783,
+    0.06604067
+  ],
+  "projection_fraction": 0.0216796875,
+  "raw_cost_p95": {
+    "energy": 2.065667152404785,
+    "mode": 0.8770036101341248,
+    "route": 0.0003683438990265131,
+    "smooth": 0.032622940838336945
+  },
+  "residual_checkpoint": null,
+  "reward_mean": 2.545493167415261,
+  "samples": 25600,
+  "seed": 11,
+  "terrain": "rough_warmup",
+  "tracking_error_mean": 0.06384190325858072
+}

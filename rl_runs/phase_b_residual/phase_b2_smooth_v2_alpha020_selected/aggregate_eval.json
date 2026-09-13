@@ -1,0 +1,48 @@
+{
+  "contract": {
+    "seeds": [11, 17, 23],
+    "num_envs": 128,
+    "steps": 200,
+    "samples_total_per_controller": 76800,
+    "terrain": "rough_warmup",
+    "domain_randomization": true,
+    "residual_filter_alpha": 0.2,
+    "smooth_definition": "smooth_v2",
+    "objective_p95": [0.0007925402, 1.983205, 0.6782783, 0.2076107264]
+  },
+  "official": {
+    "reward_mean": 2.5398486648,
+    "tracking_error_mean": 0.0634184864,
+    "distance_mean_m": 1.2365530729,
+    "energy_mean_j": 87.5574035645,
+    "cot_mech_asset_mass": 0.2486769101,
+    "cost_route": 0.5994125207,
+    "cost_energy": 0.2207472175,
+    "cost_mode": 0.2659783562,
+    "cost_smooth": 0.2121408035,
+    "hard_failures": 0
+  },
+  "official_plus_residual": {
+    "reward_mean": 2.5484993168,
+    "tracking_error_mean": 0.0630100414,
+    "distance_mean_m": 1.2587164243,
+    "energy_mean_j": 86.9957784017,
+    "cot_mech_asset_mass": 0.2427309060,
+    "cost_route": 0.5816407998,
+    "cost_energy": 0.2193312794,
+    "cost_mode": 0.2625517944,
+    "cost_smooth": 0.2119504909,
+    "hard_failures": 0
+  },
+  "percent_change": {
+    "reward_mean": 0.3405971462,
+    "tracking_error_mean": -0.6440471845,
+    "distance_mean_m": 1.7923493833,
+    "energy_mean_j": -0.6414365204,
+    "cot_mech_asset_mass": -2.3910559630,
+    "cost_route": -2.9648564672,
+    "cost_energy": -0.6414296655,
+    "cost_mode": -1.2882859349,
+    "cost_smooth": -0.0897105416
+  }
+}

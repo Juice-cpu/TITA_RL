@@ -1,0 +1,18 @@
+{
+  "status": "selected_simulation_candidate",
+  "selected_checkpoint": "checkpoints/residual_phase_b_selected.pt",
+  "source_checkpoint": "checkpoints/residual_phase_b_iter_00002.pt",
+  "scope": "simulation-only HIGH posture, two steps, 0.005-0.015 m, tread 0.35-0.45 m",
+  "hardware_validated": false,
+  "three_step_validated": false,
+  "gate": "completion count not lower and hard terminations not higher than baseline on seeds 163, 167, 173",
+  "baseline_completions": [23, 16, 15],
+  "candidate_completions": [23, 19, 18],
+  "baseline_hard_terminations": [0, 0, 0],
+  "candidate_hard_terminations": [0, 0, 0],
+  "flat_retention_seed163": {
+    "steps": 1000,
+    "hard_terminations": 0,
+    "joint_velocity_violations": 0
+  }
+}

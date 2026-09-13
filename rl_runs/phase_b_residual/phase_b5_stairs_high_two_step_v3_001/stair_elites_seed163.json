@@ -1,0 +1,48 @@
+{
+  "command_x": 0.15,
+  "completed_steps": 2400,
+  "episode_lengths": [
+    490,
+    513
+  ],
+  "hard_failures": 29,
+  "hard_reason_counts": [
+    0,
+    0,
+    0,
+    0,
+    16,
+    0,
+    13,
+    0
+  ],
+  "hard_reason_names": [
+    "infeasible_projection",
+    "velocity",
+    "acceleration",
+    "torque",
+    "collision",
+    "height",
+    "attitude",
+    "clearance"
+  ],
+  "policy_log_std": -3.8,
+  "projected_samples": 235,
+  "samples": 1003,
+  "seed": 163,
+  "source_checkpoint": "/home/ky/tita_uc_residual_rl/rl_runs/phase_b_residual/phase_b5_stairs_high_two_step_v3_001/checkpoints/residual_phase_b_iter_00001.pt",
+  "stair_height_range": [
+    0.005,
+    0.015
+  ],
+  "stair_num_steps": 2,
+  "stair_tread_range": [
+    0.6,
+    0.75
+  ],
+  "stair_width_range": [
+    1.0,
+    1.3
+  ],
+  "success_episodes": 2
+}

@@ -1,0 +1,23 @@
+{
+  "status": "rejected_deterministic_evaluation",
+  "selected_checkpoint": null,
+  "baseline": {
+    "seed": 163,
+    "stair_success_total": 2,
+    "cumulative_terminated": 4
+  },
+  "candidates": [
+    {
+      "checkpoint": "checkpoints/residual_phase_b_iter_00001.pt",
+      "stair_success_total": 0,
+      "cumulative_terminated": 4
+    },
+    {
+      "checkpoint": "checkpoints/residual_phase_b_iter_00002.pt",
+      "stair_success_total": 0,
+      "cumulative_terminated": 3
+    }
+  ],
+  "gate": "completion >= 2 and hard terminations <= 4 on seed 163",
+  "next_action": "short-approach short-tread curriculum baseline"
+}

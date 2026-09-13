@@ -1,0 +1,29 @@
+{
+  "selected_checkpoint": null,
+  "source_checkpoint": "checkpoints/residual_phase_b_iter_00001.pt",
+  "selected_utc": "2026-09-13",
+  "scope": "simulation-only HIGH posture, two steps, 0.005-0.015 m per step",
+  "hardware_validated": false,
+  "three_step_validated": false,
+  "status": "rejected_after_support_relative_observation_revalidation",
+  "preserved_rejected_checkpoint": "checkpoints/residual_phase_b_rejected_old_observation.pt",
+  "support_relative_revalidation_seed163": {
+    "baseline_completions": 2,
+    "candidate_completions": 0,
+    "baseline_hard_terminations": 4,
+    "candidate_hard_terminations": 4
+  },
+  "paired_evaluation": {
+    "seeds": [163, 167, 173],
+    "baseline_completions": [2, 0, 0],
+    "candidate_completions": [3, 2, 0],
+    "baseline_collisions": [3, 6, 3],
+    "candidate_collisions": [3, 6, 3]
+  },
+  "flat_high_retention": {
+    "seed": 163,
+    "steps": 1000,
+    "hard_terminations": 0,
+    "joint_velocity_violations": 0
+  }
+}

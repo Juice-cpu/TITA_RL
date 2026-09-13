@@ -1,0 +1,74 @@
+{
+  "cumulative_terminated": 3,
+  "episode_length_s": 24.0,
+  "hard_reasons": [
+    0,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0
+  ],
+  "observations_finite": true,
+  "posture": "HIGH",
+  "posture_height_abs_error_mean_m": 0.013558757002042099,
+  "posture_height_mean_m": 0.2874888010593978,
+  "raw_cost_mean": {
+    "energy": 0.48019757866859436,
+    "mode": 0.2320764660835266,
+    "route": 1.41449773311615,
+    "smooth": 0.023513074964284897
+  },
+  "raw_cost_p95": {
+    "energy": 1.9000985622406006,
+    "mode": 0.21158552169799805,
+    "route": 4.471699237823486,
+    "smooth": 0.10384216904640198
+  },
+  "residual_checkpoint": "./rl_runs/phase_b_residual/phase_b5_stairs_high_two_step_v2_001/checkpoints/residual_phase_b_iter_00001.pt",
+  "safety_hold_steps": 3,
+  "seed": 163,
+  "stair_local_x_max_minmax_m": [
+    1.5844383239746094,
+    7.130870819091797
+  ],
+  "stair_root_z_max_minmax_m": [
+    0.3939829170703888,
+    0.40837976336479187
+  ],
+  "stair_success_total": 0,
+  "stair_verified_level_max": [
+    2.0,
+    1.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0
+  ],
+  "steps": 1200,
+  "tunnel_success_total": 0,
+  "velocity_joint_counts": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "velocity_state_projection_counts": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "name": "tita_uc_phase_b5_stairs_high_real_single_step_timed_jump_wide_residual",
+  "stage": "B5-stairs-high-real-single-step-timed-jump-wide-residual",
+  "description": "Measured-height single-step simulation with timed jump prior and wider residual correction",
+  "asset": "./tita_rl_official/resources/tita/urdf/tita_description.urdf",
+  "device": "cuda:0",
+  "num_envs": 8,
+  "episode_length_s": 15.0,
+  "decimation": 4,
+  "dof": 8,
+  "observation_dim": 51,
+  "terrain": "stairs",
+  "fixed_posture": "HIGH",
+  "domain_randomization": false,
+  "warm_start": "./rl_runs/phase_b_residual/phase_b5_stairs_high_real_single_step_timed_jump_001/checkpoints/residual_phase_b_iter_00006.pt",
+  "residual_limit": 0.35,
+  "posture_scale": 1.0,
+  "learning_rate": 5e-07,
+  "policy_log_std": -2.7,
+  "freeze_policy_std": true,
+  "constraint_optimizer": {
+    "cost_budgets": [
+      0.6,
+      0.6,
+      0.8,
+      0.8
+    ],
+    "initial_cost_multipliers": [
+      0.4,
+      0.2,
+      0.15,
+      0.05
+    ],
+    "minimum_cost_multipliers": [
+      0.4,
+      0.2,
+      0.15,
+      0.05
+    ],
+    "dual_learning_rate": 0.001,
+    "cost_multiplier_max": 2.0,
+    "warmup_steps": 100,
+    "checkpoint_interval": 1
+  },
+  "stair_curriculum": {
+    "level": "single-real-height-timed-jump-wide-residual",
+    "hardware_validated": false,
+    "sampling": "uniform_per_vector_environment",
+    "step_height_range_m": [
+      0.17,
+      0.17
+    ],
+    "tread_range_m": [
+      0.32,
+      0.32
+    ],
+    "width_range_m": [
+      0.9,
+      1.2
+    ],
+    "num_steps": 1,
+    "start_x_m": 0.55,
+    "landing_length_m": 0.8,
+    "preview_distance_m": 1.5,
+    "success_reward": 100.0,
+    "height_progress_reward_scale": 12.0,
+    "approach_lift_reward_scale": 40.0,
+    "approach_lift_distance_m": 0.3,
+    "collision_penalty": 20.0,
+    "step_progress_reward": 12.0,
+    "level_hold_reward_scale": 2.0,
+    "completion_height_tolerance_m": 0.01,
+    "jump_assist_enabled": true,
+    "jump_assist_trigger_distance_m": 0.08,
+    "jump_assist_crouch_steps": 6,
+    "jump_assist_extension_steps": 12,
+    "jump_assist_hip_crouch_rad": 0.15,
+    "jump_assist_hip_extension_rad": 0.3,
+    "jump_assist_knee_crouch_rad": 0.7,
+    "jump_assist_knee_extension_rad": 0.8,
+    "success_requires_corridor_and_elevation": true,
+    "handrail_enabled": true,
+    "handrail_height_m": 0.9,
+    "handrail_thickness_m": 0.05,
+    "handrail_side_offset_m": 0.06,
+    "handrail_post_spacing_m": 0.9
+  },
+  "simulation_pose_anchors": {
+    "hardware_validated": false,
+    "LOW": [
+      0.0,
+      0.76,
+      -2.15,
+      0.0,
+      0.0,
+      0.76,
+      -2.15,
+      0.0
+    ],
+    "MID": [
+      0.0,
+      0.9,
+      -1.8,
+      0.0,
+      0.0,
+      0.9,
+      -1.8,
+      0.0
+    ],
+    "HIGH": [
+      0.0,
+      0.9,
+      -1.1,
+      0.0,
+      0.0,
+      0.9,
+      -1.1,
+      0.0
+    ]
+  },
+  "residual_filter_alpha": 0.1,
+  "acceleration_limit": 500.0,
+  "normalized_cost_clip": 10.0,
+  "objective": {
+    "route_weight": 0.4,
+    "energy_weight": 0.2,
+    "mode_weight": 0.15,
+    "smooth_weight": 0.05,
+    "normalization": "phase_b5_short_stair_seed163_offline_p95_v1",
+    "p95": {
+      "route": 2.8953922,
+      "energy": 3.5263677,
+      "mode": 0.8861051,
+      "smooth": 0.1742003
+    }
+  },
+  "hardware_validated": false
+}
