@@ -1,0 +1,29 @@
+{
+  "schema": "tita.navigation_maze.v1",
+  "simulation_only": true,
+  "name": "mixed_low_mid_high_corridor_v1",
+  "description": "A low-clearance roof is followed by an open switching corridor and a traversable stair section for joint LOW/MID/HIGH selection.",
+  "start_xy_m": [0.0, 0.0],
+  "goal_xy_m": [6.5, 0.0],
+  "bounds_xy_m": [-1.5, 8.0, -0.65, 0.65],
+  "floor_height_m": 0.0,
+  "map_resolution_m": 0.05,
+  "planning_inflation_m": 0.75,
+  "footprint_radius_m": 0.57,
+  "posture_envelope_height_m": [0.5093647347403965, 0.5857010932613873, 0.6657040238143199],
+  "open_overhead_reporting_cap_m": 3.0,
+  "boxes": [
+    {"name": "low_roof", "kind": "roof", "center": [1.20, 0.0, 0.63], "size": [0.90, 2.40, 0.10]},
+    {"name": "north_boundary", "kind": "wall", "center": [3.25, 1.45, 0.65], "size": [8.0, 0.10, 1.30]},
+    {"name": "south_boundary", "kind": "wall", "center": [3.25, -1.45, 0.65], "size": [8.0, 0.10, 1.30]}
+  ],
+  "information_contract": {
+    "map": "authored walls and roof plus runtime stair geometry",
+    "clearance": "geometry-conditioned candidate features with live physical perception refresh",
+    "floor": "Isaac physical stair support and calibrated flat floor",
+    "local_scan": "Isaac raycaster horizontal lidar",
+    "state": "Isaac rigid-body feedback",
+    "objective": "joint mode, route, time, path, energy, risk and switch cost",
+    "scope": "training curriculum and held-out mixed-terrain evaluation; not a global optimality certificate"
+  }
+}
