@@ -1,0 +1,16 @@
+{
+  "audits": [
+    {
+      "report": "/home/ky/Documents/Codex/2026-10-29/id/outputs/mixed_training/video_corridor_eval_rgbd_seed10056.json",
+      "sha256": "e9780d5a40bf5c818b89691af30eef7cfd89d91c5286070595f9759ea29fb27c",
+      "schema": "tita.independent_navigation_acceptance_audit.v1",
+      "status": "passed",
+      "failures": [],
+      "missing_evidence": [],
+      "verified_final_stopped_hold_s": 1.0,
+      "artifact_hashes_checked": true,
+      "scope": "Independent replay of logged physical feedback and provenance; not new simulation, global optimality, or hardware validation"
+    }
+  ],
+  "all_passed": true
+}

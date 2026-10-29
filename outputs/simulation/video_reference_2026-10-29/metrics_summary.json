@@ -43,5 +43,27 @@
       "clearance": 0
     }
   },
+  "independent_rgbd_acceptance": {
+    "seed": 10056,
+    "success": true,
+    "evaluation_status": "success",
+    "steps": 5031,
+    "path_length_m": 8.751582864497777,
+    "posture_switches": 4,
+    "selected_postures": ["LOW", "MID", "HIGH", "MID"],
+    "rendered_camera_frames": 1007,
+    "stair_execution_settled": true,
+    "audit_status": "passed",
+    "hard_reason_counts": {
+      "infeasible_projection": 0,
+      "velocity": 0,
+      "acceleration": 0,
+      "torque": 0,
+      "collision": 0,
+      "height": 0,
+      "attitude": 0,
+      "clearance": 0
+    }
+  },
   "scope": "finite A* candidate paths and calibrated single-riser simulation proxy; not a global optimality certificate"
 }

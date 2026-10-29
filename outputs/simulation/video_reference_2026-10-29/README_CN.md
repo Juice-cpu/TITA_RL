@@ -13,6 +13,7 @@
 - 台阶支持区稳定完成：`true`
 - 碰撞、速度、高度、姿态、净距等硬失败：全部为 `0`
 - 独立测试没有安全等待步；训练回合的安全等待步为 `3800`，说明策略仍有明显保守行为
+- 追加 RGBD 独立验收种子：`10056`；渲染 RGBD 帧 `1007`，正式独立验收审计 `passed`
 
 ## 场景边界
 
@@ -25,7 +26,10 @@
 
 - `video_corridor_ppo_continuation_12000.pt`：最新训练后上层 PPO 权重
 - `video_corridor_eval_seed10055.json`：独立冻结权重测试的完整记录
+- `video_corridor_eval_rgbd_seed10056.json`：带渲染 RGBD 的独立冻结权重测试记录
+- `video_corridor_eval_rgbd_seed10056.audit.json`：独立导航验收审计，状态为 `passed`
 - `video_corridor_ppo_continuation_12000.sources.tar.gz`：执行源代码快照和 NeuPAN vendor 快照
+- `video_corridor_eval_rgbd_seed10056.sources.tar.gz`：RGBD 独立测试对应的执行源代码快照
 - `scene.json`：视频参考仿真场景配置
 - `video_contact_sheet.jpg`：视频关键帧联系图
 
