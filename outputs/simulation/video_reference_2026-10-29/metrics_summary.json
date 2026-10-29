@@ -1,0 +1,47 @@
+{
+  "schema": "tita.video_reference_joint_navigation.summary.v1",
+  "date": "2026-10-29",
+  "training": {
+    "checkpoint": "video_corridor_ppo_continuation_12000.pt",
+    "steps_requested": 12000,
+    "steps_completed": 11148,
+    "success": true,
+    "evaluation_status": "success",
+    "path_length_m": 10.62779785225348,
+    "posture_switches": 8,
+    "selected_postures": ["LOW", "MID", "HIGH", "MID"],
+    "stair_execution_settled": true,
+    "hard_reason_counts": {
+      "infeasible_projection": 0,
+      "velocity": 0,
+      "acceleration": 0,
+      "torque": 0,
+      "collision": 0,
+      "height": 0,
+      "attitude": 0,
+      "clearance": 0
+    }
+  },
+  "independent_evaluation": {
+    "seed": 10055,
+    "success": true,
+    "evaluation_status": "success",
+    "steps": 5031,
+    "path_length_m": 8.751582864497777,
+    "posture_switches": 4,
+    "selected_postures": ["LOW", "MID", "HIGH", "MID"],
+    "stair_execution_settled": true,
+    "safe_wait_steps": 0,
+    "hard_reason_counts": {
+      "infeasible_projection": 0,
+      "velocity": 0,
+      "acceleration": 0,
+      "torque": 0,
+      "collision": 0,
+      "height": 0,
+      "attitude": 0,
+      "clearance": 0
+    }
+  },
+  "scope": "finite A* candidate paths and calibrated single-riser simulation proxy; not a global optimality certificate"
+}
