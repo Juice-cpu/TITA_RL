@@ -1,0 +1,29 @@
+{
+  "schema": "tita.navigation_maze.v1",
+  "simulation_only": true,
+  "name": "video_reference_corridor_low_stairs_v1",
+  "description": "Video-inspired straight indoor corridor with a synthetic low-clearance passage, an open switching buffer, and a small multi-riser stair proxy. The video shows the corridor and stairs; the low passage is added as a controlled training condition because no dog-hole is visible in the supplied footage.",
+  "start_xy_m": [0.0, 0.0],
+  "goal_xy_m": [8.5, 0.0],
+  "bounds_xy_m": [-1.5, 10.0, -1.05, 1.05],
+  "floor_height_m": 0.0,
+  "map_resolution_m": 0.05,
+  "planning_inflation_m": 0.75,
+  "footprint_radius_m": 0.57,
+  "posture_envelope_height_m": [0.5093647347403965, 0.5857010932613873, 0.6657040238143199],
+  "open_overhead_reporting_cap_m": 3.0,
+  "boxes": [
+    {"name": "low_roof", "kind": "roof", "center": [1.65, 0.0, 0.63], "size": [1.20, 1.90, 0.10]},
+    {"name": "north_boundary", "kind": "wall", "center": [4.25, 1.25, 0.65], "size": [10.0, 0.10, 1.30]},
+    {"name": "south_boundary", "kind": "wall", "center": [4.25, -1.25, 0.65], "size": [10.0, 0.10, 1.30]}
+  ],
+  "information_contract": {
+    "map": "video-inspired authored corridor, synthetic low roof, and runtime stair support",
+    "clearance": "geometry-conditioned candidate features with live physical perception refresh",
+    "floor": "Isaac physical multi-riser stair support and calibrated flat floor",
+    "local_scan": "Isaac raycaster horizontal lidar",
+    "state": "Isaac rigid-body feedback",
+    "objective": "joint mode, route, time, path, energy, risk and switch cost",
+    "scope": "simulation curriculum and held-out evaluation; not a global optimality certificate"
+  }
+}
